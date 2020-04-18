@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import PlayerCard from "./components/PlayerCard";
+
 import PlayerList from "./components/PlayerList";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [players, setPlayers] = useState([]);
@@ -17,9 +18,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <PlayerList players={players} />
-      </header>
+      <NavBar />
+      <PlayerList players={players} />
     </div>
   );
 }
