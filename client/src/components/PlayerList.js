@@ -1,13 +1,24 @@
 import React from "react";
+import Grid from '@material-ui/core/Grid'
+import {Container} from '@material-ui/core'
+
 import PlayerCard from "./PlayerCard";
-const PlayerList = (props) => {
-  console.log("Soccer", props.players);
+ 
+
+
+const PlayerList = ({players}) => {
+  
   return (
-    <div>
-      {props.players.map((player) => (
-        <PlayerCard name={player.name} country={player.country} />
+    <Container>
+    <Grid container>
+      {players.map((player) => (
+        <Grid item xs={12} md={6} lg={3}>
+          <PlayerCard name={player.name} country={player.country} />
+        </Grid>
+        
       ))}
-    </div>
+    </Grid>
+    </Container>
   );
 };
 export default PlayerList;

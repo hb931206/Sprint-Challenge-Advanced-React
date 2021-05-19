@@ -1,12 +1,15 @@
 import React from "react";
-const PlayerCard = (props) => {
-  console.log(props);
-  return (
-    <div className="player-card" data-testid="card">
-      <h1>{props.name}</h1>
+import Paper from '@material-ui/core/Paper'
 
-      <p>{props.country}</p>
-    </div>
+const PlayerCard = ({name,country}) => {
+  
+  return (
+    <Paper style={{margin:"5px", padding:"5px"}}>
+      <h1>{name}</h1>
+      <p>{country}</p>
+    </Paper>
+      
+    
   );
 };
 export default PlayerCard;
