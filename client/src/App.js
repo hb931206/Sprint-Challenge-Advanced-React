@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 
 function App() {
   const [players, setPlayers] = useState([]);
+
   useEffect(() => {
     axios
       .get("http://localhost:5000/api/players")
@@ -14,7 +15,8 @@ function App() {
 
       .catch((err) => console.log(err));
   }, []);
-  console.log(players);
+
+  console.log(players, "Search Componnent");
 
   return (
     <div className="App">

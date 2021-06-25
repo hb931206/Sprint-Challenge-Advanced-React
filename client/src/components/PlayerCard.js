@@ -5,8 +5,8 @@ const PlayerCard = ({name,country}) => {
   
   return (
     <Paper style={{margin:"5px", padding:"5px"}}>
-      <h1>{name}</h1>
-      <p>{country}</p>
+      <h1 style={{whiteSpace:"nowrap", fontSize:"16.5px"}}>{name}</h1>
+      <p style={{fontSize:"10px", fontWeight:"bold"}}>{country}</p>
     </Paper>
       
     
